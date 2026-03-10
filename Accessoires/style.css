@@ -1,7 +1,7 @@
 /* ============================================================
    Accessoires — style.css
    ============================================================ */
-@import url('../shared.css');
+@import url('/shared.css');
 
 /* ── Catégories ── */
 .categories-row {

@@ -62,18 +62,18 @@
 (function initCart() {
 
   const PRODUCTS = {
-    'Manteau Obsidienne':    { price: 1890, img: '../Images/Manteau_Obsidienne.png' },
-    'Robe Velours Nuit':     { price: 720,  img: '../Images/Robe_Velours_Nuit.png' },
-    'Veste Crêpe Sable':     { price: 540,  img: '../Images/Veste_Crepe_Sable.png' },
-    'Veste Paillettes Nuit': { price: 860,  img: '../Images/Veste_Paillettes_Nuit.png' },
-    'Pantalon Tailleur':     { price: 390,  img: '../Images/Pantalon_Tailleur.png' },
-    'Top Soie Ivoire':       { price: 310,  img: '../Images/Top_Soie_Ivoire.png' },
-    'Sac Nuit Absolue':      { price: 1240, img: '../Images/Sac_Nuit_Absolue.png' },
-    'Foulard Soie Ombres':   { price: 280,  img: '../Images/Foulard_Soie_Ombres.png' },
-    'Gants Cuir Nocturne':   { price: 195,  img: '../Images/Gants_Cuir_Nocturne.png' },
-    'Broche Or Noir':        { price: 490,  img: '../Images/Broche_Or_Noir.png' },
-    'Pochette Satin Minuit': { price: 380,  img: '../Images/Pochette_Satin_Minuit.png' },
-    'Ceinture Cuir Verni':   { price: 220,  img: '../Images/Ceinture_Cuir_Verni.png' },
+    'Manteau Obsidienne':    { price: 1890, img: '/Images/Manteau_Obsidienne.png' },
+    'Robe Velours Nuit':     { price: 720,  img: '/Images/Robe_Velours_Nuit.png' },
+    'Veste Crêpe Sable':     { price: 540,  img: '/Images/Veste_Crepe_Sable.png' },
+    'Veste Paillettes Nuit': { price: 860,  img: '/Images/Veste_Paillettes_Nuit.png' },
+    'Pantalon Tailleur':     { price: 390,  img: '/Images/Pantalon_Tailleur.png' },
+    'Top Soie Ivoire':       { price: 310,  img: '/Images/Top_Soie_Ivoire.png' },
+    'Sac Nuit Absolue':      { price: 1240, img: '/Images/Sac_Nuit_Absolue.png' },
+    'Foulard Soie Ombres':   { price: 280,  img: '/Images/Foulard_Soie_Ombres.png' },
+    'Gants Cuir Nocturne':   { price: 195,  img: '/Images/Gants_Cuir_Nocturne.png' },
+    'Broche Or Noir':        { price: 490,  img: '/Images/Broche_Or_Noir.png' },
+    'Pochette Satin Minuit': { price: 380,  img: '/Images/Pochette_Satin_Minuit.png' },
+    'Ceinture Cuir Verni':   { price: 220,  img: '/Images/Ceinture_Cuir_Verni.png' },
   };
 
   // ── Persistance via localStorage + window.name fallback ─

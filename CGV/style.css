@@ -1,7 +1,7 @@
 /* ============================================================
    Pages Légales & Contact — style.css
    ============================================================ */
-@import url('../shared.css');
+@import url('/shared.css');
 
 /* ── Hero légal ── */
 .legal-hero, .contact-hero {

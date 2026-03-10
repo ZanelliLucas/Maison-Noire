@@ -1,7 +1,7 @@
 /* ============================================================
-   Homepage — style.css  (complète ../shared.css)
+   Homepage — style.css  (complète /shared.css)
    ============================================================ */
-@import url('../shared.css');
+@import url('/shared.css');
 
 .hero {
   height: 100vh;

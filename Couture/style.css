@@ -1,7 +1,7 @@
 /* ============================================================
    Couture — style.css
    ============================================================ */
-@import url('../shared.css');
+@import url('/shared.css');
 
 .process-steps {
   display: grid; grid-template-columns: repeat(4,1fr);
