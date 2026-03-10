@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lookbook — MAISON NOIRE</title>
+  <title>MAISON NOIRE — Haute Couture</title>
   <link rel="stylesheet" href="/Homepage/style.css">
 </head>
 <body>
 
-  <div class="loader"><div class="loader-text">LOOKBOOK</div></div>
+  <!-- SPLASH SCREEN -->
+  <div class="splash" id="splash">
+    <div class="splash-corner tl"></div>
+    <div class="splash-corner tr"></div>
+    <div class="splash-corner bl"></div>
+    <div class="splash-corner br"></div>
+    <div class="splash-line-top"></div>
+    <div class="splash-logo">
+      <div class="splash-logo-main">MAISON <span>NOIRE</span></div>
+      <div class="splash-logo-sub">Haute Couture · Paris</div>
+    </div>
+    <div class="splash-year">Collection Automne — Hiver 2025</div>
+    <div class="splash-progress">
+      <div class="splash-progress-bar"></div>
+    </div>
+    <div class="splash-line-bottom"></div>
+  </div>
 
   <nav>
     <a href="/Homepage/index.html" class="logo">MAISON <span>NOIRE</span></a>
@@ -22,81 +38,190 @@
     <div class="nav-right"><button class="cart-btn">Panier (0)</button></div>
   </nav>
 
-  <section class="lb-hero">
-    <div class="lb-panel">
-      <img src="/Images/Manteau_Obsidienne.png" alt="Look 01">
-      <div class="lb-panel-overlay">
-        <p class="lb-season">Automne — Hiver 2025</p>
-        <h1 class="lb-title">Nuit<br><em>Absolue</em></h1>
-        <div class="lb-divider"></div>
+  <div class="scroll-indicator">
+    <span class="scroll-dot active"></span>
+    <span class="scroll-dot"></span>
+    <span class="scroll-dot"></span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-line"></div>
+      <p class="hero-label">Collection Automne-Hiver · 2025</p>
+      <h1 class="hero-title">L'art de<br>l'<em>élégance</em><br>absolue</h1>
+      <p class="hero-desc">Pièces conçues pour traverser les saisons et les tendances. Chaque vêtement est une déclaration silencieuse.</p>
+      <div class="hero-cta">
+        <a href="/Collection/index.html" class="btn-primary">Découvrir la collection</a>
+        <a href="/Lookbook/index.html" class="btn-ghost">Lookbook</a>
       </div>
-      <div class="lb-panel-num">01</div>
     </div>
-    <div class="lb-panel">
-      <img src="/Images/Robe_Velours_Nuit.png" alt="Look 02">
-      <div class="lb-panel-overlay">
-        <p class="lb-season">Automne — Hiver 2025</p>
-        <h1 class="lb-title">L'Ombre<br>et la <em>Grâce</em></h1>
-        <div class="lb-divider"></div>
-      </div>
-      <div class="lb-panel-num">02</div>
+    <div class="hero-right">
+      <img src="/Images/Nouvelle_Collection.png" alt="Collection AH 2025">
+      <div class="hero-badge">Fait · à · Paris</div>
+      <div class="hero-number">01</div>
     </div>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>Nouvelle Collection</span><span>✦</span>
+      <span>Automne Hiver 2025</span><span>✦</span>
+      <span>Fait à Paris</span><span>✦</span>
+      <span>Haute Couture</span><span>✦</span>
+      <span>Pièces Signature</span><span>✦</span>
+      <span>Nouvelle Collection</span><span>✦</span>
+      <span>Automne Hiver 2025</span><span>✦</span>
+      <span>Fait à Paris</span><span>✦</span>
+      <span>Haute Couture</span><span>✦</span>
+      <span>Pièces Signature</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- PRODUITS SIGNATURE -->
+  <section class="section">
+    <div class="section-header">
+      <div>
+        <p class="label">Pièces</p>
+        <h2 class="section-title">MAISON NOIRE<br><em>Signature</em></h2>
+      </div>
+      <a href="/Collection/index.html" class="section-link">Voir tout →</a>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card large">
+        <div class="img-wrap">
+          <img src="/Images/Manteau_Obsidienne.png" alt="Manteau Obsidienne">
+          <div class="product-overlay"><button class="add-to-cart">Ajouter au panier</button></div>
+          <div class="product-tag">Nouveau</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Manteau Obsidienne</div>
+          <div class="product-price">€ 1 890</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="/Images/Robe_Velours_Nuit.png" alt="Robe Velours Nuit">
+          <div class="product-overlay"><button class="add-to-cart">Ajouter au panier</button></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Robe Velours Nuit</div>
+          <div class="product-price">€ 720</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="/Images/Veste_Crepe_Sable.png" alt="Veste Crêpe Sable">
+          <div class="product-overlay"><button class="add-to-cart">Ajouter au panier</button></div>
+          <div class="product-tag">–20%</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Veste Crêpe Sable</div>
+          <div class="product-price">€ 540</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="/Images/Pantalon_Tailleur.png" alt="Pantalon Tailleur">
+          <div class="product-overlay"><button class="add-to-cart">Ajouter au panier</button></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Pantalon Tailleur</div>
+          <div class="product-price">€ 390</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="/Images/Top_Soie_Ivoire.png" alt="Top Soie Ivoire">
+          <div class="product-overlay"><button class="add-to-cart">Ajouter au panier</button></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Top Soie Ivoire</div>
+          <div class="product-price">€ 310</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <div class="features-strip">
+
+    <div class="feature-item">
+      <span class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+        </svg>
+      </span>
+      <span>Retours 30 jours</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7z"/>
+        </svg>
+      </span>
+      <span>Matières éthiques</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/>
+          <path d="M8.5 3.5C9.6 2.6 10.8 2 12 2"/><path d="M4 6.5C4.9 5.3 6 4.3 7.3 3.6"/>
+        </svg>
+      </span>
+      <span>Fait en France</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </span>
+      <span>Livraison internationale</span>
+    </div>
+
+    <div class="feature-item">
+      <span class="feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+          <line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+      </span>
+      <span>Paiement sécurisé</span>
+    </div>
+
+  </div>
+
+  <!-- EDITORIAL -->
   <section class="section">
     <div class="two-col">
-      <div class="two-col-text">
-        <p class="label">Note du Directeur Artistique</p>
-        <h2>Une saison<br>entre <em>ombre</em><br>et lumière</h2>
-        <p>Cette collection AH 2025 est née d'une fascination pour les transitions — ces instants suspendus entre le jour qui part et la nuit qui s'installe.</p>
-        <p>Les silhouettes s'étirent, les matières absorbent la lumière ou la rejettent. Velours nuit, soie ivoire, crêpe sable — une palette pensée pour résonner avec l'hiver intérieur.</p>
-        <a href="/Collection/index.html" class="btn-or">Découvrir la collection</a>
-      </div>
       <div class="two-col-visual">
-        <img src="/Images/Veste_Crepe_Sable.png" alt="Éditorial">
+        <img src="/Images/Nouvelle_Collection.png" alt="Éditorial AH 2025">
         <span class="decor">AH</span>
+      </div>
+      <div class="two-col-text">
+        <p class="label">Éditorial</p>
+        <h2>Une saison<br>entre <em>ombre</em><br>et lumière</h2>
+        <p>Cette collection AH 2025 naît d'une fascination pour le passage — ces instants entre le jour qui part et la nuit qui prend.</p>
+        <p>Velours nuit, soie ivoire, crêpe sable. Trois matières. Une seule intention : révéler ce que le vêtement peut dire quand il ne cherche pas à séduire.</p>
+        <a href="/Lookbook/index.html" class="btn-or">Voir le lookbook</a>
       </div>
     </div>
   </section>
 
-  <div style="padding:0 0 3px;background:var(--noir)">
-    <div class="lb-grid">
-      <div class="lb-item tall">
-        <img src="/Images/Veste_Paillette_Nuit.png" alt="Look 03">
-        <div class="lb-item-info"><div class="lb-item-num">Look 03</div><div class="lb-item-name">Veste Paillettes Nuit</div></div>
-      </div>
-      <div class="lb-item">
-        <img src="/Images/Top_Soie_Ivoire.png" alt="Look 04">
-        <div class="lb-item-info"><div class="lb-item-num">Look 04</div><div class="lb-item-name">Top Soie Ivoire</div></div>
-      </div>
-      <div class="lb-item">
-        <img src="/Images/Pantalon_Tailleur.png" alt="Look 05">
-        <div class="lb-item-info"><div class="lb-item-num">Look 05</div><div class="lb-item-name">Pantalon Tailleur</div></div>
-      </div>
-      <div class="lb-item wide">
-        <img src="/Images/Veste_Crepe_Sable.png" alt="Look 06">
-        <div class="lb-item-info"><div class="lb-item-num">Look 06</div><div class="lb-item-name">Veste Crêpe Sable</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="film-strip">
-    <div class="film-scroll">
-      <div class="film-frame"><img src="/Images/Manteau_Obsidienne.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Veste_Crepe_Sable.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Robe_Velours_Nuit.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Veste_Paillettes_Nuit.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Top_Soie_Ivoire.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Pantalon_Tailleur.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Manteau_Obsidienne.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Veste_Crepe_Sable.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Robe_Velours_Nuit.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Veste_Paillettes_Nuit.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Top_Soie_Ivoire.png" alt=""></div>
-      <div class="film-frame"><img src="/Images/Pantalon_Tailleur.png" alt=""></div>
-    </div>
-  </div>
-
+  <!-- NEWSLETTER -->
   <section class="newsletter">
     <p class="newsletter-label">Rejoindre la Maison</p>
     <h2 class="newsletter-title">Accès Exclusif<br><em>Avant-Première</em></h2>
