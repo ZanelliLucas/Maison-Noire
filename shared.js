@@ -5,6 +5,7 @@
 // ── Nav : shrink au scroll & lien actif ───────────────────
 (function initNav() {
   const nav = document.querySelector('nav');
+  if (!nav) return;
 
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
@@ -58,7 +59,7 @@
   });
 })();
 
-// ── Panier (localStorage — persiste entre les pages) ──────
+// ── Panier ────────────────────────────────────────────────
 (function initCart() {
 
   const PRODUCTS = {
@@ -76,22 +77,17 @@
     'Ceinture Cuir Verni':   { price: 220,  img: '/Images/Ceinture_Cuir_Verni.png' },
   };
 
-  // ── Persistance via localStorage + window.name fallback ─
-  // window.name persiste entre les navigations file:// contrairement à localStorage
   function loadCart() {
-    // Essayer localStorage d'abord
     try {
       const ls = localStorage.getItem('mn_cart_items');
       if (ls) return JSON.parse(ls);
     } catch(e) {}
-    // Fallback : window.name
     try {
       const data = JSON.parse(window.name || '{}');
       return data.mn_cart_items || [];
     } catch(e) { return []; }
   }
   function saveCart(items) {
-    // Sauvegarder dans les deux
     try { localStorage.setItem('mn_cart_items', JSON.stringify(items)); } catch(e) {}
     try {
       const data = JSON.parse(window.name || '{}');
@@ -102,7 +98,6 @@
 
   let cartItems = loadCart();
 
-  // ── Injection du panel HTML ────────────────────────────
   const overlay = document.createElement('div');
   overlay.className = 'cart-overlay';
   overlay.innerHTML = `
@@ -130,7 +125,6 @@
   const checkoutBtn = overlay.querySelector('.cart-checkout-btn');
   const closeBtn = overlay.querySelector('.cart-panel-close');
 
-  // ── Ouvrir / fermer ────────────────────────────────────
   function openCart() {
     overlay.classList.add('open');
     panel.classList.add('open');
@@ -142,7 +136,6 @@
     document.body.style.overflow = '';
   }
 
-  // Checkout
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (!cartItems.length) return;
@@ -166,12 +159,10 @@
     if (!panel.contains(e.target)) closeCart();
   });
   closeBtn.addEventListener('click', closeCart);
-
   document.querySelectorAll('.cart-btn').forEach(btn => {
     btn.addEventListener('click', openCart);
   });
 
-  // ── Rendu ──────────────────────────────────────────────
   function formatPrice(n) {
     return '€ ' + n.toLocaleString('fr-FR');
   }
@@ -238,25 +229,20 @@
     });
   }
 
-  // ── Ajouter au panier ──────────────────────────────────
   document.querySelectorAll('.add-to-cart').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-
       const card = btn.closest('.product-card, .acc-card');
       const nameEl = card && (card.querySelector('.product-name') || card.querySelector('.acc-name'));
       const name = nameEl ? nameEl.textContent.trim() : 'Pièce';
       const info = PRODUCTS[name] || { price: 0, img: '' };
-
       const existing = cartItems.find(i => i.name === name);
       if (existing) {
         existing.qty++;
       } else {
         cartItems.push({ name, price: info.price, img: info.img, qty: 1 });
       }
-
       render();
-
       const original = btn.textContent;
       btn.textContent = '✓ Ajouté';
       btn.style.background = 'var(--or)';
@@ -272,27 +258,12 @@
   render();
 })();
 
-
-
-  // Hover sur éléments interactifs
-  document.querySelectorAll('a, button, .product-card, .acc-card, .cat-card, .filter-btn').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-
-  document.addEventListener('mousedown', () => cursor.classList.add('click'));
-  document.addEventListener('mouseup',   () => cursor.classList.remove('click'));
-  document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
-  document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
-})();
-
 // ── Transitions de page ───────────────────────────────────
 (function initPageTransitions() {
   const overlay = document.createElement('div');
   overlay.className = 'page-transition';
   document.body.appendChild(overlay);
 
-  // Entrée : animation "in"
   overlay.classList.add('in');
   setTimeout(() => overlay.classList.remove('in'), 600);
 
@@ -310,13 +281,11 @@
     });
   }
 
-  // Binder au DOMContentLoaded ET après (pour les éléments tardifs)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bindLinks);
   } else {
     bindLinks();
   }
-  // Rebind après un court délai pour les éléments injectés dynamiquement
   setTimeout(bindLinks, 300);
 })();
 
@@ -327,7 +296,6 @@
     const submit = form.querySelector('.newsletter-submit');
     if (!submit) return;
 
-    // Ajouter le message de succès
     const msg = document.createElement('p');
     msg.className = 'newsletter-success';
     msg.textContent = '✦ Bienvenue dans la Maison — vous serez informé en avant-première';
