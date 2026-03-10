@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — MAISON NOIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    :root { --noir:#0a0a0a; --or:#c9a84c; --creme:#f0ebe3; --gris:#7a7670; }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--noir); color: var(--creme);
+      font-family: 'Josefin Sans', sans-serif;
+      height: 100vh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    .deco {
+      position: fixed; font-family: 'Cormorant Garamond', serif;
+      font-size: 40vw; font-weight: 300; color: rgba(201,168,76,0.03);
+      line-height: 1; user-select: none; pointer-events: none;
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    .content { position: relative; z-index: 1; }
+    .label {
+      font-size: 0.6rem; letter-spacing: 0.4em;
+      text-transform: uppercase; color: var(--or);
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 10vw, 9rem);
+      font-weight: 300; line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: italic; color: var(--or); }
+    p {
+      font-size: 0.7rem; letter-spacing: 0.12em;
+      color: var(--gris); margin-bottom: 3rem; line-height: 2;
+    }
+    a {
+      background: var(--or); color: var(--noir);
+      padding: 1rem 3rem; text-decoration: none;
+      font-size: 0.65rem; letter-spacing: 0.25em;
+      text-transform: uppercase; transition: background 0.3s;
+    }
+    a:hover { background: var(--creme); }
+    .line { width: 1px; height: 60px; background: rgba(201,168,76,0.3); margin: 3rem auto; }
+    .logo {
+      position: fixed; top: 2rem; left: 3rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.3em;
+      text-transform: uppercase; text-decoration: none;
+      color: var(--creme);
+    }
+    .logo span { color: var(--or); }
+  </style>
+</head>
+<body>
+  <a href="Homepage/index.html" class="logo">MAISON <span>NOIRE</span></a>
+  <div class="deco">404</div>
+  <div class="content">
+    <p class="label">Erreur · Page introuvable</p>
+    <h1>Cette page<br>n'<em>existe</em> pas</h1>
+    <p>La pièce que vous cherchez semble avoir<br>quitté notre collection.</p>
+    <div class="line"></div>
+    <a href="Homepage/index.html">Retour à la maison</a>
+  </div>
+</body>
+</html>

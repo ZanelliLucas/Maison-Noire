@@ -1,0 +1,191 @@
+/* ============================================================
+   Pages Légales & Contact — style.css
+   ============================================================ */
+@import url('../shared.css');
+
+/* ── Hero légal ── */
+.legal-hero, .contact-hero {
+  min-height: 40vh;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 8rem 8rem 4rem;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+  position: relative; overflow: hidden;
+}
+.legal-label {
+  font-size: 0.6rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 1.5rem;
+}
+.legal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 300; line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.legal-title em { color: var(--or); font-style: italic; }
+.legal-date {
+  font-size: 0.6rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gris);
+}
+.contact-hero-sub {
+  font-size: 0.7rem; letter-spacing: 0.1em;
+  color: var(--gris); line-height: 2; max-width: 40ch;
+}
+
+/* ── Contenu légal ── */
+.legal-content {
+  max-width: 860px; margin: 0 auto;
+  padding: 5rem 8rem 6rem;
+}
+.legal-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 300;
+  line-height: 1.8; color: var(--creme);
+  border-left: 1px solid var(--or);
+  padding-left: 2rem; margin-bottom: 4rem;
+}
+.legal-section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.legal-section:last-child { border-bottom: none; }
+.legal-section h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 1.5rem;
+}
+.legal-section p {
+  font-size: 0.78rem; line-height: 2.2;
+  color: rgba(245,240,232,0.7);
+  margin-bottom: 1rem;
+}
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section ul {
+  list-style: none; margin: 1rem 0 1rem 1rem;
+}
+.legal-section ul li {
+  font-size: 0.75rem; line-height: 2;
+  color: rgba(245,240,232,0.65);
+  padding-left: 1.2rem; position: relative;
+}
+.legal-section ul li::before {
+  content: '–'; position: absolute; left: 0;
+  color: var(--or); opacity: 0.5;
+}
+.legal-section strong { color: var(--creme); font-weight: 400; }
+.or { color: var(--or); }
+
+/* ── Layout Contact ── */
+.contact-layout {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 6rem; padding: 5rem 8rem 6rem;
+  max-width: 1200px; margin: 0 auto;
+}
+
+/* Blocs info */
+.contact-info { display: flex; flex-direction: column; gap: 2.5rem; }
+.contact-block {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.contact-block:last-child { border-bottom: none; }
+.contact-block-icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--or);
+}
+.contact-block-title {
+  font-size: 0.6rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 0.6rem;
+}
+.contact-block-text {
+  font-size: 0.8rem; line-height: 1.9;
+  color: var(--creme); margin-bottom: 0.4rem;
+}
+.contact-block-text.or { color: var(--or); }
+.contact-block-sub {
+  font-size: 0.62rem; letter-spacing: 0.1em;
+  color: var(--gris);
+}
+
+/* Formulaire */
+.contact-form-label {
+  font-size: 0.6rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 2rem;
+}
+.contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.6rem; }
+.form-field label {
+  font-size: 0.58rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gris);
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.15);
+  color: var(--creme); padding: 1rem 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.72rem; letter-spacing: 0.08em;
+  outline: none; transition: border-color 0.3s;
+  resize: none;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(138,138,138,0.5); }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { border-color: rgba(201,168,76,0.5); }
+.form-field select { appearance: none; cursor: pointer; }
+.form-field select option { background: #111; color: var(--creme); }
+
+.contact-submit {
+  background: var(--or); color: var(--noir);
+  border: none; padding: 1.1rem 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.28em;
+  text-transform: uppercase; cursor: pointer;
+  align-self: flex-start; transition: background 0.3s;
+  margin-top: 0.5rem;
+}
+.contact-submit:hover { background: var(--creme); }
+
+/* Succès */
+.contact-success {
+  display: none; flex-direction: column;
+  align-items: flex-start; gap: 1.2rem;
+  padding: 3rem; border: 1px solid rgba(201,168,76,0.15);
+  animation: fadeUp 0.6s ease;
+}
+.contact-success-icon { font-size: 1.5rem; color: var(--or); opacity: 0.6; }
+.contact-success-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 300; color: var(--creme);
+}
+.contact-success-text {
+  font-size: 0.72rem; line-height: 2;
+  color: var(--gris); max-width: 38ch;
+}
+.contact-success-sig {
+  font-size: 0.58rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--or);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .legal-content { padding: 4rem; }
+  .contact-layout { grid-template-columns: 1fr; padding: 4rem; gap: 4rem; }
+  .legal-hero, .contact-hero { padding: 8rem 4rem 3rem; }
+}
+@media (max-width: 600px) {
+  .legal-content, .contact-layout { padding: 3rem 2rem; }
+  .legal-hero, .contact-hero { padding: 7rem 2rem 2.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}

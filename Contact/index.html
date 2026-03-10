@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — MAISON NOIRE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loader"><div class="loader-text">MAISON NOIRE</div></div>
+
+  <nav>
+    <a href="../Homepage/index.html" class="logo">MAISON <span>NOIRE</span></a>
+    <ul class="nav-links">
+      <li><a href="../Collection/index.html">Collection</a></li>
+      <li><a href="../Couture/index.html">Couture</a></li>
+      <li><a href="../Accessoires/index.html">Accessoires</a></li>
+      <li><a href="../Lookbook/index.html">Lookbook</a></li>
+      <li><a href="../Maison/index.html">Maison</a></li>
+    </ul>
+    <div class="nav-right"><button class="cart-btn">Panier (0)</button></div>
+  </nav>
+
+  <div class="contact-hero">
+    <p class="legal-label">Nous écrire</p>
+    <h1 class="legal-title">Entrer en<br><em>Contact</em></h1>
+    <p class="contact-hero-sub">Notre équipe vous répond sous 24 heures, du lundi au vendredi.</p>
+  </div>
+
+  <main class="contact-layout">
+
+    <!-- Informations -->
+    <div class="contact-info">
+
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-block-title">Showroom Paris</div>
+          <div class="contact-block-text">24 Rue du Faubourg Saint-Honoré<br>75008 Paris, France</div>
+          <div class="contact-block-sub">Sur rendez-vous uniquement</div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-block-title">E-mail</div>
+          <div class="contact-block-text or">contact@maisonnoire.fr</div>
+          <div class="contact-block-sub">Réponse sous 24h ouvrées</div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-block-title">Téléphone</div>
+          <div class="contact-block-text">+33 (0)1 42 65 XX XX</div>
+          <div class="contact-block-sub">Lun — Ven, 10h — 18h</div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-block-title">Horaires</div>
+          <div class="contact-block-text">Lundi — Vendredi<br>10h00 — 18h30</div>
+          <div class="contact-block-sub">Fermé les jours fériés</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Formulaire -->
+    <div class="contact-form-wrap">
+      <p class="contact-form-label">Envoyer un message</p>
+
+      <div class="contact-form" id="contactForm">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>Prénom</label>
+            <input type="text" placeholder="Votre prénom">
+          </div>
+          <div class="form-field">
+            <label>Nom</label>
+            <input type="text" placeholder="Votre nom">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>E-mail</label>
+          <input type="email" id="contactEmail" placeholder="votre@email.fr">
+        </div>
+
+        <div class="form-field">
+          <label>Sujet</label>
+          <select>
+            <option value="" disabled selected>Choisir un sujet</option>
+            <option>Commande & livraison</option>
+            <option>Retours & échanges</option>
+            <option>Sur-mesure & Couture</option>
+            <option>Presse & partenariats</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Message</label>
+          <textarea placeholder="Votre message..." rows="5"></textarea>
+        </div>
+
+        <button class="contact-submit" id="contactSubmit">Envoyer le message</button>
+
+      </div>
+
+      <div class="contact-success" id="contactSuccess">
+        <div class="contact-success-icon">✦</div>
+        <div class="contact-success-title">Message envoyé</div>
+        <div class="contact-success-text">Merci de nous avoir contactés. Notre équipe vous répondra dans les meilleurs délais.</div>
+        <div class="contact-success-sig">MAISON NOIRE · Paris</div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div>
+      <div class="footer-logo">MAISON NOIRE</div>
+      <div class="footer-copy">© 2025 Maison Noire. Tous droits réservés.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../CGV/index.html">CGV</a></li>
+      <li><a href="../Confidentialite/index.html">Confidentialité</a></li>
+      <li><a href="../Mentions-Legales/index.html">Mentions Légales</a></li>
+      <li><a href="../Contact/index.html">Contact</a></li>
+    </ul>
+  </footer>
+
+  <script src="../shared.js"></script>
+  <script>
+    document.getElementById('contactSubmit').addEventListener('click', function() {
+      const email = document.getElementById('contactEmail').value;
+      if (!email.includes('@')) {
+        document.getElementById('contactEmail').style.borderColor = 'rgba(139,26,26,0.6)';
+        setTimeout(() => document.getElementById('contactEmail').style.borderColor = '', 1500);
+        return;
+      }
+      document.getElementById('contactForm').style.opacity = '0';
+      document.getElementById('contactForm').style.transform = 'translateY(-12px)';
+      document.getElementById('contactForm').style.transition = 'all 0.4s ease';
+      setTimeout(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'flex';
+      }, 400);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* ============================================================
+   Couture — style.css
+   ============================================================ */
+@import url('../shared.css');
+
+.process-steps {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  border: 1px solid rgba(201,168,76,0.1); margin: 4rem 0;
+}
+.step {
+  padding: 3rem 2rem;
+  border-right: 1px solid rgba(201,168,76,0.1);
+  transition: background 0.3s;
+}
+.step:last-child { border-right: none; }
+.step:hover { background: rgba(201,168,76,0.03); }
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300;
+  color: rgba(201,168,76,0.15); line-height: 1; margin-bottom: 1.5rem;
+}
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300;
+  color: var(--creme); margin-bottom: 1rem;
+}
+.step-text { font-size: 0.7rem; line-height: 2; color: var(--gris); }
+
+.quote-section {
+  padding: 8rem; background: linear-gradient(135deg, #0d0c0a, #141210);
+  text-align: center; position: relative;
+}
+.quote-section::before {
+  content: '"'; position: absolute; top: 2rem; left: 50%; transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif; font-size: 12rem; font-weight: 300;
+  color: rgba(201,168,76,0.04); line-height: 1;
+}
+blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.8rem);
+  font-weight: 300; font-style: italic; line-height: 1.5;
+  color: var(--creme); max-width: 70ch; margin: 0 auto 2rem;
+  position: relative; z-index: 1;
+}
+blockquote em { color: var(--or); }
+.quote-author {
+  font-size: 0.65rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gris);
+}
+
+@media (max-width: 900px) {
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .step { border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .quote-section { padding: 5rem 2rem; }
+}

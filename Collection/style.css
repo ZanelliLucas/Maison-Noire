@@ -1,0 +1,61 @@
+/* ============================================================
+   Collection — style.css
+   ============================================================ */
+@import url('../shared.css');
+
+/* ── Filter Bar ── */
+.filter-bar {
+  display: flex;
+  align-items: stretch;
+  padding: 0 8rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 72px; /* hauteur nav scrolled */
+  z-index: 90;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+}
+.filter-bar::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 1.4rem 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gris);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  margin-bottom: -1px; /* overlap la border-bottom du parent */
+}
+.filter-btn:hover { color: var(--creme); }
+.filter-btn.active {
+  color: var(--or);
+  border-bottom-color: var(--or);
+}
+
+.collection-count {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gris);
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .filter-bar { padding: 0 4rem; }
+}
+@media (max-width: 900px) {
+  .filter-bar { padding: 0 2rem; top: 60px; }
+}
+

@@ -1,0 +1,135 @@
+/* ============================================================
+   Maison — style.css
+   ============================================================ */
+@import url('../shared.css');
+
+/* ── Chiffres clés ── */
+.key-numbers {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  background: linear-gradient(135deg, #0d0c0a, #141210);
+}
+.key-num-item {
+  padding: 4rem 3rem; text-align: center;
+  border-right: 1px solid rgba(201,168,76,0.08);
+  transition: background 0.3s;
+}
+.key-num-item:last-child { border-right: none; }
+.key-num-item:hover { background: rgba(201,168,76,0.03); }
+.key-num-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 300; color: var(--or); line-height: 1; margin-bottom: 0.8rem;
+}
+.key-num-label {
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gris); line-height: 1.6;
+}
+
+/* ── Timeline ── */
+.timeline { position: relative; padding: 2rem 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: rgba(201,168,76,0.15); transform: translateX(-50%);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 1fr 60px 1fr;
+  align-items: center; margin-bottom: 3rem;
+}
+.tl-content {
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(201,168,76,0.1);
+  background: rgba(201,168,76,0.02);
+  transition: border-color 0.3s, background 0.3s;
+}
+.tl-content:hover {
+  border-color: rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.04);
+}
+/* Items pairs : contenu à droite */
+.timeline-item:nth-child(even) .tl-content { grid-column: 3; }
+.timeline-item:nth-child(even) .tl-empty   { grid-column: 1; }
+.tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 300;
+  color: var(--or); line-height: 1; margin-bottom: 0.8rem;
+}
+.tl-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 300; color: var(--creme); margin-bottom: 0.6rem;
+}
+.tl-text { font-size: 0.68rem; line-height: 1.9; color: var(--gris); }
+.tl-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--or); margin: 0 auto; grid-column: 2;
+  box-shadow: 0 0 0 5px rgba(201,168,76,0.12), 0 0 0 10px rgba(201,168,76,0.04);
+  flex-shrink: 0;
+}
+.tl-empty { opacity: 0; pointer-events: none; }
+
+/* ── Valeurs ── */
+.values-grid {
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 1px; background: rgba(201,168,76,0.08);
+}
+.value-item {
+  background: var(--noir); padding: 4rem 3.5rem;
+  transition: background 0.3s;
+}
+.value-item:hover { background: rgba(201,168,76,0.025); }
+.value-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem; font-weight: 300;
+  color: rgba(201,168,76,0.1); line-height: 1; margin-bottom: 1.5rem;
+}
+.value-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem; font-weight: 300; color: var(--creme); margin-bottom: 1rem;
+}
+.value-title em { font-style: italic; color: var(--or); }
+.value-text { font-size: 0.7rem; line-height: 2.2; color: var(--gris); }
+
+/* ── Équipe ── */
+.team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+.team-card {
+  text-align: center; padding: 3rem 2rem;
+  border: 1px solid rgba(201,168,76,0.08);
+  transition: border-color 0.3s, background 0.3s;
+}
+.team-card:hover {
+  border-color: rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.02);
+}
+.team-avatar {
+  width: 100px; height: 100px; border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #1a1815, #2a2520);
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300; color: rgba(201,168,76,0.5);
+}
+.team-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 300; color: var(--creme); margin-bottom: 0.4rem;
+}
+.team-role {
+  font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--or); margin-bottom: 1.2rem;
+}
+.team-bio { font-size: 0.68rem; line-height: 2; color: var(--gris); }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .timeline-item { grid-template-columns: 1fr 40px 1fr; }
+}
+@media (max-width: 900px) {
+  .key-numbers { grid-template-columns: 1fr 1fr; }
+  .key-num-item { border-bottom: 1px solid rgba(201,168,76,0.08); }
+  .timeline::before { left: 16px; top: 0; }
+  .timeline-item { grid-template-columns: 32px 1fr; gap: 0; }
+  .tl-dot { grid-column: 1; margin: 0; }
+  .tl-content { grid-column: 2 !important; padding: 1.5rem; }
+  .tl-empty { display: none; }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+}

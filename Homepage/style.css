@@ -1,0 +1,86 @@
+/* ============================================================
+   Homepage — style.css  (complète ../shared.css)
+   ============================================================ */
+@import url('../shared.css');
+
+.hero {
+  height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.hero-left {
+  display: flex; flex-direction: column;
+  justify-content: center; padding: 8rem 4rem 4rem 8rem;
+  position: relative;
+}
+.hero-line {
+  position: absolute; left: 0; top: 50%;
+  width: 4rem; height: 1px; background: var(--or);
+}
+.hero-label {
+  font-size: 0.6rem; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 2rem; animation: fadeUp 0.8s ease 1.6s both;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 6vw, 7rem);
+  font-weight: 300; line-height: 1.05;
+  margin-bottom: 2rem; animation: fadeUp 0.8s ease 1.8s both;
+}
+.hero-title em { font-style: italic; color: var(--or); }
+.hero-desc {
+  font-size: 0.7rem; letter-spacing: 0.1em; line-height: 2;
+  color: var(--gris); max-width: 32ch;
+  margin-bottom: 3rem; animation: fadeUp 0.8s ease 2s both;
+}
+.hero-cta {
+  display: flex; gap: 1.5rem; align-items: center;
+  animation: fadeUp 0.8s ease 2.2s both;
+}
+.btn-primary {
+  background: var(--or); color: var(--noir);
+  border: none; padding: 1rem 2.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; cursor: pointer; transition: all 0.3s;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary:hover { background: var(--creme); }
+.btn-ghost {
+  background: none; border: none; color: var(--gris);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; cursor: pointer;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: color 0.3s; text-decoration: none;
+}
+.btn-ghost:hover { color: var(--creme); }
+.btn-ghost::before { content: '→'; font-size: 1rem; transition: transform 0.3s; }
+.btn-ghost:hover::before { transform: translateX(4px); }
+.hero-right { position: relative; overflow: hidden; background: #111; }
+.hero-right img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top; display: block;
+  animation: zoomIn 8s ease forwards 1.4s;
+}
+.hero-badge {
+  position: absolute; bottom: 3rem; left: 3rem;
+  width: 80px; height: 80px;
+  border: 1px solid rgba(201,168,76,0.5); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.5rem; letter-spacing: 0.15em;
+  text-transform: uppercase; text-align: center; color: var(--or);
+  animation: rotate 20s linear infinite;
+}
+.hero-number {
+  position: absolute; top: 3rem; right: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem; font-weight: 300;
+  color: rgba(201,168,76,0.08); line-height: 1;
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 8rem 2rem 4rem; }
+}
